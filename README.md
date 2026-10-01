@@ -102,12 +102,17 @@ E:\law\
 
 ---
 
-## 🚀 كيفية تشغيل الموقع الآن
+## 🚀 روابط المنظومة الحية أونلاين (Live Production URLs)
+- **رابط المنظومة الرئيسي للجمهور والموكلين:**
+  🌐 **[https://mostashar-ali-halawa.netlify.app](https://mostashar-ali-halawa.netlify.app)**
+- **بوابة الإدارة المركزية المشددة للمستشار:**
+  🔒 **[https://mostashar-ali-halawa.netlify.app/admin.html](https://mostashar-ali-halawa.netlify.app/admin.html)**
 
-### على جهازك محلياً:
-- فقط اضغط مرتين على ملف **`تشغيل_الموقع_محلياً.bat`**، أو افتح ملف **`index.html`** مباشرة في أي متصفح!
+---
 
-### لنشره أونلاين مجاناً أمام الجمهور:
+## 💻 كيفية التشغيل المحلي (Offline):
+- اضغط مرتين على ملف **`تشغيل_الموقع_محلياً.bat`** (أو `run_local.bat`).
+- لفتح لوحة الإدارة محلياً: اضغط مرتين على **`تشغيل_لوحة_الإدارة.bat`** (أو `run_admin.bat`).
 - راجع ملف [`deployment-guide/DEPLOYMENT_GUIDE_AR.md`](file:///E:/law/deployment-guide/DEPLOYMENT_GUIDE_AR.md) واسحب المجلد إلى [Netlify Drop](https://app.netlify.com/drop) ليصبح موقعك متاحاً برابط HTTPS عالمي في 30 ثانية!
 
 ---
