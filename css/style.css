@@ -1,0 +1,312 @@
+/* ==========================================================================
+   المظهر والتنسيق المتقدم لمكتب الأستاذ علي علي محمود حلاوه للمحاماة
+   Authoritative, High-Converting Legal Theme with RTL & Luxury Gold Palette
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --color-primary: #0a1128;
+  --color-primary-light: #162044;
+  --color-gold: #c69214;
+  --color-gold-light: #dfb15b;
+  --color-gold-dark: #966b02;
+  --color-accent: #b45309;
+  --color-dark: #070c1d;
+  --color-slate-dark: #1e293b;
+  --color-slate-light: #f8fafc;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --shadow-gold: 0 10px 25px -5px rgba(198, 146, 20, 0.25);
+  --shadow-navy: 0 20px 30px -10px rgba(10, 17, 40, 0.3);
+}
+
+* {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070c1e;
+  color: #f1f5f9;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1128;
+}
+::-webkit-scrollbar-thumb {
+  background: #c69214;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dfb15b;
+}
+
+/* Luxury Gold Text & Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #ffe082 0%, #dfb15b 40%, #c69214 70%, #a1770b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #dfb15b 0%, #c69214 50%, #966b02 100%);
+  background-size: 200% auto;
+  transition: all 0.3s ease;
+}
+
+.bg-gold-gradient:hover {
+  background-position: right center;
+  box-shadow: 0 10px 25px -5px rgba(223, 177, 91, 0.4);
+}
+
+.border-gold-glow {
+  border-color: rgba(223, 177, 91, 0.35);
+  box-shadow: 0 0 15px rgba(198, 146, 20, 0.15);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.border-gold-glow:hover {
+  border-color: rgba(223, 177, 91, 0.85);
+  box-shadow: 0 12px 30px rgba(198, 146, 20, 0.35);
+  transform: translateY(-6px);
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background: rgba(16, 24, 52, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(16, 24, 52, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(198, 146, 20, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.glass-input {
+  background: rgba(10, 17, 40, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.glass-input:focus {
+  border-color: #dfb15b !important;
+  box-shadow: 0 0 0 4px rgba(198, 146, 20, 0.28), 0 0 15px rgba(223, 177, 91, 0.2) !important;
+  outline: none !important;
+  transform: translateY(-1px);
+}
+
+/* Islamic & Legal Geometric Patterns */
+.bg-legal-pattern {
+  background-color: #070c1e;
+  background-image: radial-gradient(rgba(198, 146, 20, 0.08) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.04) 1px, #070c1e 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* ==========================================================================
+   UI/UX Motion Framework & Micro-Interactions
+   ========================================================================== */
+
+/* Button Hover Scale & Active Push-Down */
+.btn-motion {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.btn-motion:hover {
+  transform: scale(1.025);
+  box-shadow: 0 10px 25px -5px rgba(223, 177, 91, 0.35);
+}
+
+.btn-motion:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Cards & Practice Areas Lift Effect */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  will-change: transform, box-shadow;
+}
+
+.card-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(198, 146, 20, 0.2);
+  border-color: rgba(223, 177, 91, 0.6);
+}
+
+/* Scroll Animations: Fade-in and Slide-up Reveal via IntersectionObserver */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-100 { transition-delay: 0.1s; }
+.reveal-delay-200 { transition-delay: 0.2s; }
+.reveal-delay-300 { transition-delay: 0.3s; }
+.reveal-delay-400 { transition-delay: 0.4s; }
+
+/* Subtle floating and pulsing animations */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s infinite ease-in-out;
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSoft 4s infinite ease-in-out;
+}
+
+/* Step Wizard Progress indicators */
+.step-dot.active {
+  background: #c69214;
+  color: #0a1128;
+  border-color: #dfb15b;
+  box-shadow: 0 0 15px rgba(223, 177, 91, 0.6);
+}
+
+.step-dot.completed {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #34d399;
+}
+
+/* Animated SVG Checkmark for Success Feedback */
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke: #10b981;
+  fill: none;
+  animation: strokeCircle 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: strokeCheck 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+}
+
+@keyframes strokeCircle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeCheck {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* WhatsApp Message Preview Box */
+.whatsapp-chat-bubble {
+  background-color: #054640;
+  color: #e9edef;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.whatsapp-chat-bubble::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  border-width: 6px 8px 6px 0;
+  border-style: solid;
+  border-color: transparent #054640 transparent transparent;
+}
+
+/* Print Stylesheet for Lead Export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  nav, footer, .no-print, #floating-mobile-bar {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* ==========================================================================
+   Consultant Photos Carousel / Slider Styles
+   ========================================================================== */
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.96);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.carousel-slide img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.carousel-dot {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel-dot.active {
+  width: 2rem;
+  background: linear-gradient(135deg, #ffe082 0%, #dfb15b 50%, #c69214 100%);
+  box-shadow: 0 0 12px rgba(223, 177, 91, 0.6);
+}
+

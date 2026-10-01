@@ -1,0 +1,20 @@
+{
+  "name": "lawyer-ali-halawa-platform",
+  "version": "1.0.0",
+  "description": "منظومة الاستقبال والفرز الآلي للاستشارات القانونية - مكتب الأستاذ علي علي محمود حلاوه للمحاماة",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "dev": "npx serve -l 3000"
+  },
+  "keywords": [
+    "lawyer",
+    "legal",
+    "intake",
+    "crm",
+    "whatsapp",
+    "menoufia"
+  ],
+  "author": "Ali Ali Mahmoud Halawa Law Firm",
+  "license": "MIT"
+}
