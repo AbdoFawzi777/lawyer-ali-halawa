@@ -102,10 +102,14 @@ E:\law\
 
 ---
 
-## 🚀 روابط المنظومة الرسمية أونلاين على Google Firebase (Production URLs)
-- **رابط المنظومة الرئيسي للجمهور والموكلين (سريع جداً وغير محجوب):**
+## 🚀 روابط المنظومة الرسمية أونلاين على Google Firebase & GitHub
+- **رابط المنظومة الأساسي للجمهور (Google Cloud CDN - فائق السرعة):**
   🌐 **[https://mostashar-ali-halawa.web.app](https://mostashar-ali-halawa.web.app)**
   *(رابط بديل إضافي: [https://mostashar-ali-halawa.firebaseapp.com](https://mostashar-ali-halawa.firebaseapp.com))*
+- **رابط الاستضافة الدائم عبر GitHub Pages:**
+  🐙 **[https://abdofawzi777.github.io/lawyer-ali-halawa/](https://abdofawzi777.github.io/lawyer-ali-halawa/)**
+- **مستودع الكود المصدري على GitHub:**
+  📂 **[https://github.com/AbdoFawzi777/lawyer-ali-halawa](https://github.com/AbdoFawzi777/lawyer-ali-halawa)**
 - **بوابة الإدارة المركزية المشددة للمستشار:**
   🔒 **[https://mostashar-ali-halawa.web.app/admin.html](https://mostashar-ali-halawa.web.app/admin.html)**
 - **لوحة تحكم المشروع في Google Firebase Console:**
