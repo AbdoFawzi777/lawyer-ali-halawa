@@ -2,11 +2,8 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   
-  <!-- Auto Tablet / Desktop Viewport Controller (Immediate Execution in Head) -->
-  <script src="js/viewport-controller.js"></script>
-
   <title>بوابة الإدارة المركزية المؤمنة | مكتب الأستاذ علي علي محمود حلاوه للمحاماة</title>
 
   <!-- Strict Anti-Leak & Security Headers -->
@@ -338,8 +335,18 @@
 
       <!-- Executive Leads Table -->
       <div class="glass-panel rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
-        <div class="overflow-x-auto">
-          <table class="w-full text-right border-collapse">
+        
+        <!-- Mobile Horizontal Scroll Helper Banner -->
+        <div class="sm:hidden px-4 py-2 bg-amber-500/10 border-b border-amber-500/20 text-[11px] text-amber-300 font-bold flex items-center justify-between">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-arrows-left-right text-amber-400"></i>
+            <span>اسحب الجدول أفقياً لرؤية كافة تفاصيل القضايا</span>
+          </span>
+          <i class="fa-solid fa-hand-pointer text-amber-400 animate-pulse"></i>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="w-full text-right border-collapse min-w-[720px]">
             <thead>
               <tr class="border-b border-slate-800 bg-slate-950/80 text-slate-400 text-xs font-bold">
                 <th class="py-3.5 px-3">كود النزاع</th>
@@ -395,12 +402,6 @@
       }
     }
   </script>
-
-  <!-- Floating Viewport Switcher for Mobile / Tablet / Desktop Toggle -->
-  <button id="viewport-mode-toggle" onclick="toggleViewportMode()" class="btn-motion" title="تبديل وضع العرض">
-    <i class="fa-solid fa-desktop text-amber-400"></i>
-    <span>وضع الكمبيوتر / التابلت (مفعل)</span>
-  </button>
 
   <!-- Core Security & Dashboard Scripts -->
   <script src="js/admin-auth.js"></script>

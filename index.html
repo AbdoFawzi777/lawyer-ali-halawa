@@ -2,11 +2,8 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   
-  <!-- Auto Tablet / Desktop Viewport Controller (Immediate Execution in Head) -->
-  <script src="js/viewport-controller.js"></script>
-
   <title>مكتب الأستاذ علي علي محمود حلاوه | للمحاماة والاستشارات القانونية - المنوفية</title>
   
   <!-- Meta SEO & Social Sharing -->
@@ -163,42 +160,83 @@
   </nav>
 
   <!-- ==================== MOBILE MENU DRAWER ==================== -->
-  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-lg hidden flex flex-col p-6 transition-all duration-300">
-    <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-      <div class="flex items-center gap-3">
-        <i class="fa-solid fa-scale-balanced text-amber-400 text-xl"></i>
-        <span class="font-bold text-white text-base">مكتب الأستاذ علي حلاوه</span>
-      </div>
-      <button id="close-mobile-menu" class="w-10 h-10 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-    </div>
-
-    <div class="flex flex-col gap-4 text-base font-semibold text-slate-200">
-      <a href="#hero" class="mobile-nav-link py-2 border-b border-slate-900 hover:text-amber-400">الرئيسية</a>
-      <a href="#about" class="mobile-nav-link py-2 border-b border-slate-900 hover:text-amber-400">عن المستشار</a>
-      <a href="#specialties" class="mobile-nav-link py-2 border-b border-slate-900 hover:text-amber-400">التخصصات والخدمات</a>
-      <a href="#intake-section" class="mobile-nav-link py-2 border-b border-slate-900 text-amber-400 font-bold">فرز الاستشارات والواتساب</a>
-      <a href="#appointment-section" class="mobile-nav-link py-2 border-b border-slate-900 hover:text-amber-400">حجز موعد بالمكتب</a>
-      <a href="#faq" class="mobile-nav-link py-2 border-b border-slate-900 hover:text-amber-400">الأسئلة الشائعة</a>
-      <a href="#contact" class="mobile-nav-link py-2 border-b border-slate-900 hover:text-amber-400">مقر المكتب والتواصل</a>
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex justify-end transition-opacity duration-300" aria-modal="true" role="dialog">
+    <div id="mobile-menu-panel" class="w-full max-w-xs sm:max-w-sm h-full bg-[#0a1128] border-l border-amber-500/30 p-6 flex flex-col justify-between overflow-y-auto shadow-2xl">
       
-      <button id="open-crm-btn-mobile" class="mt-4 py-3 px-4 rounded-xl bg-slate-900 border border-amber-500/30 text-amber-300 text-sm font-bold flex items-center justify-center gap-2">
-        <i class="fa-solid fa-briefcase"></i>
-        فتح لوحة إدارة وسجل الطلبات
-      </button>
-    </div>
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i class="fa-solid fa-scale-balanced text-xl"></i>
+          </div>
+          <div>
+            <div class="font-black text-white text-sm">مكتب علي حلاوه</div>
+            <div class="text-[11px] text-amber-400">للمحاماة والاستشارات</div>
+          </div>
+        </div>
+        <button id="close-mobile-menu" type="button" class="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
 
-    <div class="mt-auto pt-6 border-t border-slate-800 space-y-3">
-      <div class="text-xs text-slate-400 text-center">للاتصال الفوري في حالات الطوارئ:</div>
-      <div class="grid grid-cols-2 gap-2 text-center text-xs font-bold">
-        <a href="tel:01228194003" class="py-2.5 rounded-lg bg-emerald-600/20 text-emerald-300 border border-emerald-500/30">
-          <i class="fa-solid fa-phone ml-1"></i> 01228194003
+      <!-- Navigation Links -->
+      <div class="py-4 space-y-1.5 text-sm font-semibold text-slate-200">
+        <a href="#hero" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-800/80 hover:text-amber-300 transition">
+          <i class="fa-solid fa-house text-amber-400 w-5"></i>
+          <span>الرئيسية</span>
         </a>
-        <a href="tel:01003049739" class="py-2.5 rounded-lg bg-emerald-600/20 text-emerald-300 border border-emerald-500/30">
-          <i class="fa-solid fa-phone ml-1"></i> 01003049739
+        <a href="#about" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-800/80 hover:text-amber-300 transition">
+          <i class="fa-solid fa-user-tie text-amber-400 w-5"></i>
+          <span>عن المستشار وخبراته</span>
+        </a>
+        <a href="#specialties" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-800/80 hover:text-amber-300 transition">
+          <i class="fa-solid fa-gavel text-amber-400 w-5"></i>
+          <span>التخصصات القضائية</span>
+        </a>
+        <a href="#intake-section" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 font-bold hover:bg-amber-500/20 transition">
+          <i class="fa-solid fa-file-pen text-amber-400 w-5"></i>
+          <span>فرز الاستشارات والواتساب</span>
+        </a>
+        <a href="#appointment-section" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-800/80 hover:text-amber-300 transition">
+          <i class="fa-solid fa-calendar-check text-amber-400 w-5"></i>
+          <span>حجز موعد بالمكتب</span>
+        </a>
+        <a href="#faq" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-800/80 hover:text-amber-300 transition">
+          <i class="fa-solid fa-circle-question text-amber-400 w-5"></i>
+          <span>الأسئلة الشائعة والأتعاب</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-800/80 hover:text-amber-300 transition">
+          <i class="fa-solid fa-location-dot text-amber-400 w-5"></i>
+          <span>مقر المكتب والاتصال</span>
+        </a>
+
+        <!-- Admin Portal Direct Link -->
+        <a href="admin.html" class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white transition">
+          <i class="fa-solid fa-user-shield text-amber-400 w-5"></i>
+          <span>بوابة الإدارة المركزية (المستشار)</span>
         </a>
       </div>
+
+      <!-- Quick Action CTAs & Emergency Contacts -->
+      <div class="pt-4 border-t border-white/10 space-y-3">
+        <a href="#intake-section" class="mobile-nav-link w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>طلب استشارة فورية</span>
+        </a>
+
+        <div class="text-[11px] text-slate-400 text-center font-semibold pt-1">طوارئ التحقيقات والمحاكم (24/7):</div>
+        <div class="grid grid-cols-2 gap-2 text-center text-xs font-bold">
+          <a href="tel:01228194003" class="py-2.5 rounded-xl bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 flex items-center justify-center gap-1.5 hover:bg-emerald-600/30 transition">
+            <i class="fa-solid fa-phone"></i>
+            <span>01228194003</span>
+          </a>
+          <a href="tel:01003049739" class="py-2.5 rounded-xl bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 flex items-center justify-center gap-1.5 hover:bg-emerald-600/30 transition">
+            <i class="fa-solid fa-phone"></i>
+            <span>01003049739</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -398,7 +436,7 @@
               </div>
 
               <!-- Carousel Viewport / Stage -->
-              <div id="consultant-carousel-stage" class="relative w-full h-[430px] sm:h-[490px] md:h-[510px] rounded-2xl overflow-hidden bg-slate-950">
+              <div id="consultant-carousel-stage" class="relative w-full h-[290px] sm:h-[380px] md:h-[460px] lg:h-[510px] rounded-2xl overflow-hidden bg-slate-950">
                 
                 <!-- Slide 1: Ministry of Justice -->
                 <div class="carousel-slide active" data-slide-index="0">
@@ -824,7 +862,7 @@
 
                 <!-- Navigation -->
                 <div class="pt-4 flex justify-end">
-                  <button type="button" id="btn-step-1-next" class="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 transition">
+                  <button type="button" id="btn-step-1-next" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 transition btn-motion">
                     <span>التالي: تصنيف القضية</span>
                     <i class="fa-solid fa-arrow-left"></i>
                   </button>
@@ -917,13 +955,13 @@
                 </div>
 
                 <!-- Navigation -->
-                <div class="pt-4 flex items-center justify-between">
-                  <button type="button" id="btn-step-2-prev" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs flex items-center gap-2">
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                  <button type="button" id="btn-step-2-prev" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs flex items-center justify-center gap-2 btn-motion order-2 sm:order-1">
                     <i class="fa-solid fa-arrow-right"></i>
                     <span>السابق</span>
                   </button>
 
-                  <button type="button" id="btn-step-2-next" class="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 transition">
+                  <button type="button" id="btn-step-2-next" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 transition btn-motion order-1 sm:order-2">
                     <span>التالي: تفاصيل الموضوع</span>
                     <i class="fa-solid fa-arrow-left"></i>
                   </button>
@@ -970,13 +1008,13 @@
                 </div>
 
                 <!-- Navigation & Submit -->
-                <div class="pt-4 flex items-center justify-between">
-                  <button type="button" id="btn-step-3-prev" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs flex items-center gap-2">
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                  <button type="button" id="btn-step-3-prev" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs flex items-center justify-center gap-2 btn-motion order-2 sm:order-1">
                     <i class="fa-solid fa-arrow-right"></i>
                     <span>السابق</span>
                   </button>
 
-                  <button type="submit" id="btn-submit-intake" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-700 hover:from-emerald-400 hover:to-teal-600 text-white font-black text-sm flex items-center gap-2.5 shadow-xl shadow-emerald-500/25 transition transform hover:scale-[1.02]">
+                  <button type="submit" id="btn-submit-intake" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-700 hover:from-emerald-400 hover:to-teal-600 text-white font-black text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-emerald-500/25 transition transform hover:scale-[1.02] btn-motion order-1 sm:order-2">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
                     <span>إرسال وتواصل عبر الواتساب ⚡</span>
                   </button>
@@ -1529,20 +1567,20 @@
   </footer>
 
   <!-- ==================== STICKY FLOATING BOTTOM BAR FOR MOBILE ==================== -->
-  <div id="floating-mobile-bar" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0a1128]/95 backdrop-blur-md border-t border-amber-500/30 p-2.5 shadow-2xl">
+  <div id="floating-mobile-bar" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0a1128]/95 backdrop-blur-md border-t border-amber-500/30 p-2.5 safe-area-bottom shadow-2xl">
     <div class="grid grid-cols-3 gap-2 text-center">
       
-      <a href="tel:01228194003" class="py-2.5 px-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-bold flex flex-col items-center justify-center gap-1 border border-slate-700">
+      <a href="tel:01228194003" class="py-2.5 px-1 min-h-[46px] rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-bold flex flex-col items-center justify-center gap-1 border border-slate-700 btn-motion">
         <i class="fa-solid fa-phone text-sm"></i>
         <span class="text-[10px]">اتصال فوري</span>
       </a>
 
-      <a href="#intake-section" class="py-2.5 px-1 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-black flex flex-col items-center justify-center gap-1 shadow-lg shadow-amber-500/20">
+      <a href="#intake-section" class="py-2.5 px-1 min-h-[46px] rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-black flex flex-col items-center justify-center gap-1 shadow-lg shadow-amber-500/20 btn-motion">
         <i class="fa-solid fa-file-pen text-sm"></i>
         <span class="text-[10px]">تقديم استشارة</span>
       </a>
 
-      <a href="https://wa.me/201228194003" target="_blank" class="py-2.5 px-1 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex flex-col items-center justify-center gap-1 shadow">
+      <a href="https://wa.me/201228194003" target="_blank" class="py-2.5 px-1 min-h-[46px] rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex flex-col items-center justify-center gap-1 shadow btn-motion">
         <i class="fa-brands fa-whatsapp text-sm"></i>
         <span class="text-[10px]">واتساب مباشر</span>
       </a>
@@ -1723,12 +1761,6 @@
 
   <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed top-5 left-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
-
-  <!-- Floating Viewport Switcher for Mobile / Tablet / Desktop Toggle -->
-  <button id="viewport-mode-toggle" onclick="toggleViewportMode()" class="btn-motion" title="تبديل وضع العرض">
-    <i class="fa-solid fa-desktop text-amber-400"></i>
-    <span>وضع الكمبيوتر / التابلت (مفعل)</span>
-  </button>
 
   <!-- Main JavaScript Files -->
   <script src="js/app.js"></script>

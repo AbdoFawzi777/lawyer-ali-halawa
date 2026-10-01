@@ -311,47 +311,75 @@ body {
 }
 
 /* ==========================================================================
-   وضع العرض للجهاز اللوحي والكمبيوتر على الهواتف (Tablet / Desktop View Mode)
+   Mobile-First Optimization & Touch Ergonomics (iOS & Android)
    ========================================================================== */
-html.tablet-desktop-mode,
-html.tablet-desktop-mode body {
-  min-width: 1024px !important;
-  width: 1024px !important;
-  max-width: 100% !important;
+
+/* Prevent iOS Safari Auto-Zoom on form input focus (Requires >= 16px font-size) */
+.glass-input,
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="email"],
+select.glass-input,
+textarea.glass-input {
+  font-size: 16px !important;
+  min-height: 48px;
+  line-height: 1.5;
+  -webkit-appearance: none;
 }
 
-/* Floating Viewport Mode Switcher */
-#viewport-mode-toggle {
-  position: fixed;
-  bottom: 1.25rem;
-  left: 1.25rem;
-  z-index: 9999;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.85rem;
-  border-radius: 9999px;
-  background: rgba(10, 17, 40, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(223, 177, 91, 0.4);
-  color: #f8fafc;
-  font-size: 0.72rem;
-  font-weight: 700;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(223, 177, 91, 0.2);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  user-select: none;
+textarea.glass-input {
+  min-height: 110px;
 }
 
-#viewport-mode-toggle:hover {
-  background: rgba(16, 26, 56, 0.98);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(223, 177, 91, 0.35);
+/* Touch Targets: minimum 44px tap area for comfortable mobile thumb interaction */
+.touch-target,
+.mobile-nav-link,
+#mobile-menu-btn,
+#close-mobile-menu,
+#carousel-prev-btn,
+#carousel-next-btn {
+  min-width: 44px;
+  min-height: 44px;
 }
 
-#viewport-mode-toggle:active {
-  transform: scale(0.96);
+/* Fluid Responsive Horizontal Table Scrolling on Mobile */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(223, 177, 91, 0.4) rgba(10, 17, 40, 0.8);
 }
+
+.table-responsive-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive-wrapper::-webkit-scrollbar-track {
+  background: rgba(10, 17, 40, 0.8);
+  border-radius: 4px;
+}
+
+.table-responsive-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(223, 177, 91, 0.45);
+  border-radius: 4px;
+}
+
+/* Mobile Navigation Drawer Smooth Slide Animation */
+#mobile-menu-drawer {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* iPhone Notch and Home Indicator Safe Area Insets */
+.safe-area-bottom {
+  padding-bottom: max(0.65rem, env(safe-area-inset-bottom, 0.65rem));
+}
+
+.safe-area-top {
+  padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
+}
+
 
 
