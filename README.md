@@ -102,11 +102,14 @@ E:\law\
 
 ---
 
-## 🚀 روابط المنظومة الحية أونلاين (Live Production URLs)
-- **رابط المنظومة الرئيسي للجمهور والموكلين:**
-  🌐 **[https://mostashar-ali-halawa.netlify.app](https://mostashar-ali-halawa.netlify.app)**
+## 🚀 روابط المنظومة الرسمية أونلاين على Google Firebase (Production URLs)
+- **رابط المنظومة الرئيسي للجمهور والموكلين (سريع جداً وغير محجوب):**
+  🌐 **[https://mostashar-ali-halawa.web.app](https://mostashar-ali-halawa.web.app)**
+  *(رابط بديل إضافي: [https://mostashar-ali-halawa.firebaseapp.com](https://mostashar-ali-halawa.firebaseapp.com))*
 - **بوابة الإدارة المركزية المشددة للمستشار:**
-  🔒 **[https://mostashar-ali-halawa.netlify.app/admin.html](https://mostashar-ali-halawa.netlify.app/admin.html)**
+  🔒 **[https://mostashar-ali-halawa.web.app/admin.html](https://mostashar-ali-halawa.web.app/admin.html)**
+- **لوحة تحكم المشروع في Google Firebase Console:**
+  ⚙️ [https://console.firebase.google.com/project/mostashar-ali-halawa/overview](https://console.firebase.google.com/project/mostashar-ali-halawa/overview)
 
 ---
 
