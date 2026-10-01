@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Auto Tablet / Desktop Viewport Controller (Immediate Execution in Head) -->
+  <script src="js/viewport-controller.js"></script>
+
   <title>بوابة الإدارة المركزية المؤمنة | مكتب الأستاذ علي علي محمود حلاوه للمحاماة</title>
 
   <!-- Strict Anti-Leak & Security Headers -->
@@ -391,6 +395,12 @@
       }
     }
   </script>
+
+  <!-- Floating Viewport Switcher for Mobile / Tablet / Desktop Toggle -->
+  <button id="viewport-mode-toggle" onclick="toggleViewportMode()" class="btn-motion" title="تبديل وضع العرض">
+    <i class="fa-solid fa-desktop text-amber-400"></i>
+    <span>وضع الكمبيوتر / التابلت (مفعل)</span>
+  </button>
 
   <!-- Core Security & Dashboard Scripts -->
   <script src="js/admin-auth.js"></script>

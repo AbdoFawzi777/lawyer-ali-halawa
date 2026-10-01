@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Auto Tablet / Desktop Viewport Controller (Immediate Execution in Head) -->
+  <script src="js/viewport-controller.js"></script>
+
   <title>مكتب الأستاذ علي علي محمود حلاوه | للمحاماة والاستشارات القانونية - المنوفية</title>
   
   <!-- Meta SEO & Social Sharing -->
@@ -1719,6 +1723,12 @@
 
   <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed top-5 left-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- Floating Viewport Switcher for Mobile / Tablet / Desktop Toggle -->
+  <button id="viewport-mode-toggle" onclick="toggleViewportMode()" class="btn-motion" title="تبديل وضع العرض">
+    <i class="fa-solid fa-desktop text-amber-400"></i>
+    <span>وضع الكمبيوتر / التابلت (مفعل)</span>
+  </button>
 
   <!-- Main JavaScript Files -->
   <script src="js/app.js"></script>
