@@ -13,7 +13,7 @@ const AUTH_CONFIG = {
   // Cryptographic Salt
   salt: 'HALAWA_SEC_SALT_2026_LEGAL_VAULT_MENOUF',
   
-  // Salted SHA-256 Hash of: "ElMostashar@2026#SecuredAdmin!" + salt
+  // Pre-computed Salted SHA-256 Hash
   saltedHash: '10064d7ef03f526088e24615bc03b498993342c5563df08812e9a4fb11da9e97',
 
   // Rate Limiting Policy
