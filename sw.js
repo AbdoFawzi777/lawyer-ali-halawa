@@ -3,7 +3,7 @@
  * Lawyer Ali Ali Mahmoud Halawa Legal Platform
  */
 
-const CACHE_NAME = 'halawa-law-cache-v1';
+const CACHE_NAME = 'halawa-law-cache-v2';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
