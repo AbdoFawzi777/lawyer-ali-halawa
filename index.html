@@ -13,42 +13,26 @@
   <meta property="og:description" content="منظومة الفرز والاستشارات القانونية الفورية المباشرة عبر الواتساب. تواصل الآن مع نخبة الدفاع القانوني.">
   <meta property="og:type" content="website">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            lawNavy: {
-              900: '#070c1d',
-              800: '#0a1128',
-              700: '#101a38',
-              600: '#16234b'
-            },
-            lawGold: {
-              300: '#ffe082',
-              400: '#dfb15b',
-              500: '#c69214',
-              600: '#a67709',
-              700: '#875f04'
-            }
-          },
-          fontFamily: {
-            cairo: ['Cairo', 'sans-serif'],
-            tajawal: ['Tajawal', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <!-- High-Performance Resource Hints & Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Optimized Google Font (Cairo) with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Precompiled Static Tailwind CSS (Zero Runtime Overhead, 37KB) -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
 
   <!-- FontAwesome 6 Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="assets/lawyer-courtroom-gown.webp" type="image/webp">
 </head>
 
 <body class="bg-[#070c1d] text-slate-100 font-cairo antialiased selection:bg-amber-500 selection:text-slate-950">
@@ -302,7 +286,7 @@
             <div class="flex items-center justify-between pb-6 border-b border-white/10">
               <div class="flex items-center gap-3">
                 <div class="w-14 h-14 rounded-2xl p-[2px] bg-gradient-to-tr from-amber-500 to-amber-300 shadow-lg shadow-amber-500/20 overflow-hidden shrink-0">
-                  <img src="assets/lawyer-courtroom-gown.png" alt="الأستاذ علي علي محمود حلاوه" class="w-full h-full object-cover object-top rounded-[14px]">
+                  <img src="assets/lawyer-courtroom-gown.webp" alt="الأستاذ علي علي محمود حلاوه" width="56" height="56" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-top rounded-[14px]">
                 </div>
                 <div>
                   <h3 class="text-base font-bold text-white">المكتب القانوني المتكامل</h3>
@@ -423,7 +407,7 @@
                 
                 <!-- Slide 1: Ministry of Justice -->
                 <div class="carousel-slide active" data-slide-index="0">
-                  <img src="assets/lawyer-justice-ministry.png" alt="المستشار علي علي محمود حلاوه أمام وزارة العدل" loading="lazy" class="w-full h-full object-cover object-top">
+                  <img src="assets/lawyer-justice-ministry.webp" alt="المستشار علي علي محمود حلاوه أمام وزارة العدل" loading="lazy" decoding="async" class="w-full h-full object-cover object-top">
                   <div class="absolute inset-0 bg-gradient-to-t from-[#070c1e] via-[#070c1e]/40 to-transparent"></div>
                   <div class="absolute bottom-12 right-0 left-0 p-5 text-right z-20 space-y-1">
                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px] font-bold">
@@ -436,7 +420,7 @@
 
                 <!-- Slide 2: Court Entrance -->
                 <div class="carousel-slide" data-slide-index="1">
-                  <img src="assets/lawyer-court-entrance.png" alt="الأستاذ علي حلاوه أمام دار القضاء والمحكمة" loading="lazy" class="w-full h-full object-cover object-top">
+                  <img src="assets/lawyer-court-entrance.webp" alt="الأستاذ علي حلاوه أمام دار القضاء والمحكمة" loading="lazy" decoding="async" class="w-full h-full object-cover object-top">
                   <div class="absolute inset-0 bg-gradient-to-t from-[#070c1e] via-[#070c1e]/40 to-transparent"></div>
                   <div class="absolute bottom-12 right-0 left-0 p-5 text-right z-20 space-y-1">
                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold">
@@ -449,7 +433,7 @@
 
                 <!-- Slide 3: Courtroom Gown Portrait -->
                 <div class="carousel-slide" data-slide-index="2">
-                  <img src="assets/lawyer-courtroom-gown.png" alt="المستشار علي حلاوه برداء المحاماة الرسمي وشارة النقابة" loading="lazy" class="w-full h-full object-cover object-top">
+                  <img src="assets/lawyer-courtroom-gown.webp" alt="المستشار علي حلاوه برداء المحاماة الرسمي وشارة النقابة" loading="lazy" decoding="async" class="w-full h-full object-cover object-top">
                   <div class="absolute inset-0 bg-gradient-to-t from-[#070c1e] via-[#070c1e]/40 to-transparent"></div>
                   <div class="absolute bottom-12 right-0 left-0 p-5 text-right z-20 space-y-1">
                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px] font-bold">
@@ -462,7 +446,7 @@
 
                 <!-- Slide 4: Suit Portrait -->
                 <div class="carousel-slide" data-slide-index="3">
-                  <img src="assets/lawyer-portrait-suit.jpg" alt="المستشار علي علي محمود حلاوه" loading="lazy" class="w-full h-full object-cover object-top">
+                  <img src="assets/lawyer-portrait-suit.webp" alt="المستشار علي علي محمود حلاوه" loading="lazy" decoding="async" class="w-full h-full object-cover object-top">
                   <div class="absolute inset-0 bg-gradient-to-t from-[#070c1e] via-[#070c1e]/40 to-transparent"></div>
                   <div class="absolute bottom-12 right-0 left-0 p-5 text-right z-20 space-y-1">
                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/40 text-[11px] font-bold">
@@ -1745,9 +1729,17 @@
   <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed top-5 left-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
-  <!-- Main JavaScript Files -->
-  <script src="js/app.js"></script>
-  <script src="js/crm.js"></script>
+  <!-- Main JavaScript Files (Non-blocking Deferred Loading) -->
+  <script src="js/app.js" defer></script>
+  <script src="js/crm.js" defer></script>
 
+  <!-- High-Performance Service Worker Registration for Instant Reloads -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>

@@ -16,5 +16,8 @@
     "menoufia"
   ],
   "author": "Ali Ali Mahmoud Halawa Law Firm",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
 }
